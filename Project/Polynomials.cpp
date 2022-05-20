@@ -1,16 +1,5 @@
 #include<iostream>
 using namespace std;
-//
-//
-//
-//
-//
-////
-//
-/
-
-/
-/
 class Polynomial{
     int *degCoff;
     int capacity = 100;
