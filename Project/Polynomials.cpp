@@ -46,6 +46,34 @@ class Polynomial{
         //operator overloading - 
 
         //operator overloading *
+        Polynomial operator * (Polynomial p2){
+
+            Polynomial p3;
+
+            int max_capacity = capacity + p2.capacity;
+            int *temp = new int[max_capacity];
+
+            for(int i=0; i<max_capacity; i++){
+                temp[i] = 0;
+            }
+            for(int i=0; i<capacity; i++){
+                for(int j=0; j<p2.capacity; j++){
+                    if(i==0 || j==0){
+                        continue;
+                    }
+                    else{
+                        int newDeg = i + j;
+                        int coffMult = degCoff[i] * p2.degCoff[j];
+                        temp[newDeg] += coffMult;
+                    }
+                }
+            }
+
+            p3.degCoff = temp;
+            p3.capacity = max_capacity;
+
+            return p3;
+        }
 };
 
 int main(){
