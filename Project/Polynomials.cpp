@@ -46,6 +46,8 @@ class Polynomial{
 
         //operator overloading - 
 
+        //func ends
+
         //operator overloading *
         Polynomial operator * (Polynomial p2){
 
