@@ -38,6 +38,14 @@ class Polynomial{
             }
             degCoff[deg] = coff;
         }
+
+        //print function
+
+        //operator overloading +
+
+        //operator overloading - 
+
+        //operator overloading *
 };
 
 int main(){
