@@ -4,6 +4,7 @@ using namespace std;
 class Polynomial{
     int *degCoff;
     int capacity = 100;
+
     public:
         Polynomial(){
             degCoff = new int[capacity];
@@ -76,6 +77,7 @@ class Polynomial{
         }
 };
 
+// Main func()
 int main(){
 
     Polynomial p1;
