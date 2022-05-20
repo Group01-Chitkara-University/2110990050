@@ -40,6 +40,15 @@ class Polynomial{
         }
 
         //print function
+        void print(){
+            for(int i=0; i<capacity; i++){
+                if(degCoff[i] == 0){
+                    continue;
+                }
+                cout << degCoff[i] << "x" << i << " ";
+            }
+            cout << endl;
+        }
 
         //operator overloading +
 
