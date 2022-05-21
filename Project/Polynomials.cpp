@@ -53,7 +53,17 @@ class Polynomial{
         }
 
         //print function
-        //Write your code here.
+//<<<<<<< HEAD=======
+        void print(){
+            for(int i=0; i<capacity; i++){
+                if(degCoff[i] == 0){
+                    continue;
+                }
+                cout << degCoff[i] << "x" << i << " ";
+            }
+            cout << endl;
+        }
+//>>>>>>> 6b58937edd6e3a8a23cd3a5c08deef5074f33377
 
         //operator overloading + 
         Polynomial operator +(Polynomial p2){
