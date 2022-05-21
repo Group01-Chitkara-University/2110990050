@@ -13,6 +13,18 @@ class Polynomial{
             }
         }
 
+        // default
+        Polynomial(Polynomial const &p){
+            int * newcpyconst=new int[p.capacity];
+            for (int i=0;i<p.capacity;i++){
+            newcpyconst[i]=p.degCoff[i];
+            
+            
+            }
+            this->degCoff = newcpyconst;
+            this->capacity = p.capacity;
+        }
+
         void set(int deg, int coff){
 
             int *newDegCoff;            
@@ -45,25 +57,25 @@ class Polynomial{
         //operator overloading + 
         Polynomial operator +(Polynomial p2){
  
-        Polynomial p3;
+            Polynomial p3;
 
-        int max_capacity = (capacity > p2.capacity) ? capacity : p2.capacity;
-        int *temp = new int[max_capacity];
+            int max_capacity = (capacity > p2.capacity) ? capacity : p2.capacity;
+            int *temp = new int[max_capacity];
 
-        for (int i=0; i<max_capacity; i++){
-            temp[i] = 0;
-        } 
-        for (int i=0; i<capacity; i++){
-            temp[i] = degCoff[i];
-        }
-        for (int i=0; i<p2.capacity; i++){
-            temp[i] += p2.degCoff[i];
-        }
-        
-        p3.degCoff = temp;
-        p3.capacity = max_capacity;
+            for (int i=0; i<max_capacity; i++){
+                temp[i] = 0;
+            } 
+            for (int i=0; i<capacity; i++){
+                temp[i] = degCoff[i];
+            }
+            for (int i=0; i<p2.capacity; i++){
+                temp[i] += p2.degCoff[i];
+            }
+            
+            p3.degCoff = temp;
+            p3.capacity = max_capacity;
 
-        return p3;
+            return p3;
         } 
 
         //operator overloading - 
